@@ -1,0 +1,72 @@
+<!-- 
+  /* ==========================================================================
+  ** Add Int 1 Form Layout
+  ** 10/03/2019
+  ** Alan Medina Silva
+  ** ========================================================================== */
+-->
+
+
+
+<div class="abc-addProductContainer">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <h1> Add Int 1</h1>
+
+        <form class="form" (ngSubmit)="onSubmit()">
+
+
+          <div class="form-group">
+            <label for="name"> Material Name </label>
+            <input type="text" name="name" class="form-control" [(ngModel)]="name" placeholder="int-1 Name">
+
+          </div>
+
+          <div class="form-group">
+            <label for=""> RM2 </label>
+            <select name="rm2" id="rm2" [(ngModel)]="selecedRM2" class="form-control">
+              <option value="{{rm2.id}}" *ngFor="let rm2 of rawMaterials2"> {{rm2.name}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for=""> RM3 </label>
+            <select name="rm3" id="rm3" [(ngModel)]="selecedRM3" class="form-control">
+              <option value="{{rm3.id}}" *ngFor="let rm3 of rawMaterials3"> {{rm3.name}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for=""> int 2 </label>
+            <select name="int2" id="int2" [(ngModel)]="selecedInt2" class="form-control">
+              <option value="{{int2.id}}" *ngFor="let int2 of int2Materials"> {{int2.name}} </option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label for="name"> Quantity</label>
+            <input type="number" min="1" max="100" name="quantity" class="form-control" [(ngModel)]="quantity"
+              placeholder="0-100">
+          </div>
+
+          <div class="form-group">
+              <span class = "abc-errorMessage"> {{errorMessage}}   </span>
+              <span class = "abc-sucessMessage"> {{sucessMessage}} </span>
+          </div>
+
+
+
+          <app-app-button buttonText="Save Material"></app-app-button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

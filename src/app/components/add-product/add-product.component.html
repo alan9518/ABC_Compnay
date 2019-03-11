@@ -1,0 +1,70 @@
+<!-- 
+  /* ==========================================================================
+  ** Add Prouct Form Layout
+  ** 10/03/2019
+  ** Alan Medina Silva
+  ** ========================================================================== */
+-->
+<div class="abc-addProductContainer">
+
+
+
+  <div class="container">
+    <h1> Add FG Material</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="name"> Material Name </label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="int-2" required>
+          </div>
+
+
+          <div class="form-group">
+            <label for="int1"> Int1 </label>
+            <select name="int1" id="int1" [(ngModel)]="selecedInt1" class="form-control" required>
+              <option value="{{int1.id}}" *ngFor="let int1 of int1Materials"> {{int1.name}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rm1"> RM1 </label>
+            <select name="rm1" id="rm1" [(ngModel)]="selecedRM1" class="form-control" required>
+              <option value="{{rm1.id}}" *ngFor="let rm1 of rawMaterials1"> {{rm1.name}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rm2"> RM2 </label>
+            <select name="rm2" id="rm2" [(ngModel)]="selecedRM2" class="form-control" required>
+              <option value="{{rm2.id}}" *ngFor="let rm2 of rawMaterials2"> {{rm2.name}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity"> Quantity</label>
+            <input type="number" class="form-control" min="1" max="100" name="quantity" [(ngModel)]="quantity"
+              placeholder="0-100" required>
+
+          </div>
+
+
+
+          <div class="form-group">
+            <span class="abc-errorMessage"> {{errorMessage}} </span>
+            <span class="abc-sucessMessage"> {{sucessMessage}} </span>
+          </div>
+
+          <app-app-button buttonText="Save Product"></app-app-button>
+
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

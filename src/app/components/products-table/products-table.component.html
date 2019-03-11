@@ -1,0 +1,26 @@
+<div class="abc-table-responsive-vertical shadow-z-1">
+  <!-- Table starts here -->
+  <table id="table" class="abc-table abc-table-hover abc-table-mc-light-blue">
+    <thead>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col}}
+          </th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+  
+        <tr *ngFor="let product of products">
+            <td data-title="ID"> {{product.id}} </td>
+            <td data-title="Name">{{product.name}}</td>
+            <td data-title="Int matertial"> {{ product.INT1 }}  </td>
+            <!-- <td data-title="RM1"> {{ product.rawMaterial1Name }} </td> -->
+            <!-- <td data-title="RM2">{{product.rawMaterial2Name}}</td> -->
+            <td data-title="Quantity">{{product.quantity}}</td>
+        </tr>
+
+    </tbody>
+  </table>
+</div>

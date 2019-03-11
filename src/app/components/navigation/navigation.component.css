@@ -1,0 +1,21 @@
+/* ==========================================================================
+** Navigation Component Styles
+** 10/03/2019
+** Alan Medina Silva
+** ========================================================================== */
+
+.abc-productsLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.abc-navigationItem {
+    padding: 15px;
+    text-decoration: none;
+}
+
+app-navigation-button {
+    padding: 20px;
+}

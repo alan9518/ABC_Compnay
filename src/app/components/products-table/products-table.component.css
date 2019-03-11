@@ -1,0 +1,519 @@
+/* ==========================================================================
+** Products Table Component Styles
+** Material Design Table
+** Styles from CODEPEN DEMO : https://codepen.io/zavoloklom/pen/IGkDz
+** 10/03/2019
+** Alan Medina Silva
+** ========================================================================== */
+
+.shadow-z-1 {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* -- Material Design Table style -------------- */
+
+.abc-table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+.abc-table thead tr, .abc-table tbody tr, .abc-table tfoot tr {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.abc-table thead tr th, .abc-table tbody tr th, .abc-table tfoot tr th, .abc-table thead tr td, .abc-table tbody tr td, .abc-table tfoot tr td {
+    text-align: left;
+    padding: 1.6rem;
+    vertical-align: top;
+    border-top: 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.abc-table thead tr th {
+    font-weight: 400;
+    color: #757575;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.abc-table caption+thead tr:first-child th, .abc-table colgroup+thead tr:first-child th, .abc-table thead:first-child tr:first-child th, .abc-table caption+thead tr:first-child td, .abc-table colgroup+thead tr:first-child td, .abc-table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+.abc-table tbody+tbody {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.abc-table .abc-table {
+    background-color: #fff;
+}
+
+.abc-table .no-border {
+    border: 0;
+}
+
+.abc-table-condensed thead tr th, .abc-table-condensed tbody tr th, .abc-table-condensed tfoot tr th, .abc-table-condensed thead tr td, .abc-table-condensed tbody tr td, .abc-table-condensed tfoot tr td {
+    padding: 0.8rem;
+}
+
+.abc-table-bordered {
+    border: 0;
+}
+
+.abc-table-bordered thead tr th, .abc-table-bordered tbody tr th, .abc-table-bordered tfoot tr th, .abc-table-bordered thead tr td, .abc-table-bordered tbody tr td, .abc-table-bordered tfoot tr td {
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.abc-table-bordered thead tr th, .abc-table-bordered thead tr td {
+    border-bottom-width: 2px;
+}
+
+.abc-table-striped tbody tr:nth-child(odd) td, .abc-table-striped tbody tr:nth-child(odd) th {
+    background-color: #f5f5f5;
+}
+
+.abc-table-hover tbody tr:hover td, .abc-table-hover tbody tr:hover th {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 768px) {
+    .abc-table-responsive-vertical .abc-table {
+        margin-bottom: 0;
+        background-color: transparent;
+    }
+    .abc-table-responsive-vertical .abc-table thead, .abc-table-responsive-vertical .abc-table tfoot {
+        display: none;
+    }
+    .abc-table-responsive-vertical .abc-table tbody {
+        display: block;
+    }
+    .abc-table-responsive-vertical .abc-table tbody tr {
+        display: block;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+        margin-bottom: 1.6rem;
+    }
+    .abc-table-responsive-vertical .abc-table tbody tr td {
+        background-color: #fff;
+        display: block;
+        vertical-align: middle;
+        text-align: right;
+    }
+    .abc-table-responsive-vertical .abc-table tbody tr td[data-title]:before {
+        content: attr(data-title);
+        float: left;
+        font-size: inherit;
+        font-weight: 400;
+        color: #757575;
+    }
+    .abc-table-responsive-vertical.shadow-z-1 {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .abc-table-responsive-vertical.shadow-z-1 .abc-table tbody tr {
+        border: none;
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    }
+    .abc-table-responsive-vertical .abc-table-bordered {
+        border: 0;
+    }
+    .abc-table-responsive-vertical .abc-table-bordered tbody tr td {
+        border: 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .abc-table-responsive-vertical .abc-table-bordered tbody tr td:last-child {
+        border-bottom: 0;
+    }
+    .abc-table-responsive-vertical .abc-table-striped tbody tr td, .abc-table-responsive-vertical .abc-table-striped tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped tbody tr td:nth-child(odd) {
+        background-color: #f5f5f5;
+    }
+    .abc-table-responsive-vertical .abc-table-hover tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover tbody tr td:hover {
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+}
+
+.abc-table-striped.abc-table-mc-red tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-red tbody tr:nth-child(odd) th {
+    background-color: #fde0dc;
+}
+
+.abc-table-hover.abc-table-mc-red tbody tr:hover td, .abc-table-hover.abc-table-mc-red tbody tr:hover th {
+    background-color: #f9bdbb;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-red tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-red tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-red tbody tr td:nth-child(odd) {
+        background-color: #fde0dc;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-red tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-red tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-red tbody tr td:hover {
+        background-color: #f9bdbb;
+    }
+}
+
+.abc-table-striped.abc-table-mc-pink tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-pink tbody tr:nth-child(odd) th {
+    background-color: #fce4ec;
+}
+
+.abc-table-hover.abc-table-mc-pink tbody tr:hover td, .abc-table-hover.abc-table-mc-pink tbody tr:hover th {
+    background-color: #f8bbd0;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-pink tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-pink tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-pink tbody tr td:nth-child(odd) {
+        background-color: #fce4ec;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-pink tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-pink tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-pink tbody tr td:hover {
+        background-color: #f8bbd0;
+    }
+}
+
+.abc-table-striped.abc-table-mc-purple tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-purple tbody tr:nth-child(odd) th {
+    background-color: #f3e5f5;
+}
+
+.abc-table-hover.abc-table-mc-purple tbody tr:hover td, .abc-table-hover.abc-table-mc-purple tbody tr:hover th {
+    background-color: #e1bee7;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-purple tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-purple tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-purple tbody tr td:nth-child(odd) {
+        background-color: #f3e5f5;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-purple tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-purple tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-purple tbody tr td:hover {
+        background-color: #e1bee7;
+    }
+}
+
+.abc-table-striped.abc-table-mc-deep-purple tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-deep-purple tbody tr:nth-child(odd) th {
+    background-color: #ede7f6;
+}
+
+.abc-table-hover.abc-table-mc-deep-purple tbody tr:hover td, .abc-table-hover.abc-table-mc-deep-purple tbody tr:hover th {
+    background-color: #d1c4e9;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-purple tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-purple tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-purple tbody tr td:nth-child(odd) {
+        background-color: #ede7f6;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-purple tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-purple tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-purple tbody tr td:hover {
+        background-color: #d1c4e9;
+    }
+}
+
+.abc-table-striped.abc-table-mc-indigo tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-indigo tbody tr:nth-child(odd) th {
+    background-color: #e8eaf6;
+}
+
+.abc-table-hover.abc-table-mc-indigo tbody tr:hover td, .abc-table-hover.abc-table-mc-indigo tbody tr:hover th {
+    background-color: #c5cae9;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-indigo tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-indigo tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-indigo tbody tr td:nth-child(odd) {
+        background-color: #e8eaf6;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-indigo tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-indigo tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-indigo tbody tr td:hover {
+        background-color: #c5cae9;
+    }
+}
+
+.abc-table-striped.abc-table-mc-blue tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-blue tbody tr:nth-child(odd) th {
+    background-color: #e7e9fd;
+}
+
+.abc-table-hover.abc-table-mc-blue tbody tr:hover td, .abc-table-hover.abc-table-mc-blue tbody tr:hover th {
+    background-color: #d0d9ff;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-blue tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-blue tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-blue tbody tr td:nth-child(odd) {
+        background-color: #e7e9fd;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-blue tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-blue tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-blue tbody tr td:hover {
+        background-color: #d0d9ff;
+    }
+}
+
+.abc-table-striped.abc-table-mc-light-blue tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-light-blue tbody tr:nth-child(odd) th {
+    background-color: #e1f5fe;
+}
+
+.abc-table-hover.abc-table-mc-light-blue tbody tr:hover td, .abc-table-hover.abc-table-mc-light-blue tbody tr:hover th {
+    background-color: #b3e5fc;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-blue tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-blue tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-blue tbody tr td:nth-child(odd) {
+        background-color: #e1f5fe;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-blue tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-blue tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-blue tbody tr td:hover {
+        background-color: #b3e5fc;
+    }
+}
+
+.abc-table-striped.abc-table-mc-cyan tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-cyan tbody tr:nth-child(odd) th {
+    background-color: #e0f7fa;
+}
+
+.abc-table-hover.abc-table-mc-cyan tbody tr:hover td, .abc-table-hover.abc-table-mc-cyan tbody tr:hover th {
+    background-color: #b2ebf2;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-cyan tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-cyan tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-cyan tbody tr td:nth-child(odd) {
+        background-color: #e0f7fa;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-cyan tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-cyan tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-cyan tbody tr td:hover {
+        background-color: #b2ebf2;
+    }
+}
+
+.abc-table-striped.abc-table-mc-teal tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-teal tbody tr:nth-child(odd) th {
+    background-color: #e0f2f1;
+}
+
+.abc-table-hover.abc-table-mc-teal tbody tr:hover td, .abc-table-hover.abc-table-mc-teal tbody tr:hover th {
+    background-color: #b2dfdb;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-teal tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-teal tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-teal tbody tr td:nth-child(odd) {
+        background-color: #e0f2f1;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-teal tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-teal tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-teal tbody tr td:hover {
+        background-color: #b2dfdb;
+    }
+}
+
+.abc-table-striped.abc-table-mc-green tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-green tbody tr:nth-child(odd) th {
+    background-color: #d0f8ce;
+}
+
+.abc-table-hover.abc-table-mc-green tbody tr:hover td, .abc-table-hover.abc-table-mc-green tbody tr:hover th {
+    background-color: #a3e9a4;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-green tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-green tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-green tbody tr td:nth-child(odd) {
+        background-color: #d0f8ce;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-green tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-green tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-green tbody tr td:hover {
+        background-color: #a3e9a4;
+    }
+}
+
+.abc-table-striped.abc-table-mc-light-green tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-light-green tbody tr:nth-child(odd) th {
+    background-color: #f1f8e9;
+}
+
+.abc-table-hover.abc-table-mc-light-green tbody tr:hover td, .abc-table-hover.abc-table-mc-light-green tbody tr:hover th {
+    background-color: #dcedc8;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-green tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-green tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-light-green tbody tr td:nth-child(odd) {
+        background-color: #f1f8e9;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-green tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-green tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-light-green tbody tr td:hover {
+        background-color: #dcedc8;
+    }
+}
+
+.abc-table-striped.abc-table-mc-lime tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-lime tbody tr:nth-child(odd) th {
+    background-color: #f9fbe7;
+}
+
+.abc-table-hover.abc-table-mc-lime tbody tr:hover td, .abc-table-hover.abc-table-mc-lime tbody tr:hover th {
+    background-color: #f0f4c3;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-lime tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-lime tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-lime tbody tr td:nth-child(odd) {
+        background-color: #f9fbe7;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-lime tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-lime tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-lime tbody tr td:hover {
+        background-color: #f0f4c3;
+    }
+}
+
+.abc-table-striped.abc-table-mc-yellow tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-yellow tbody tr:nth-child(odd) th {
+    background-color: #fffde7;
+}
+
+.abc-table-hover.abc-table-mc-yellow tbody tr:hover td, .abc-table-hover.abc-table-mc-yellow tbody tr:hover th {
+    background-color: #fff9c4;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-yellow tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-yellow tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-yellow tbody tr td:nth-child(odd) {
+        background-color: #fffde7;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-yellow tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-yellow tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-yellow tbody tr td:hover {
+        background-color: #fff9c4;
+    }
+}
+
+.abc-table-striped.abc-table-mc-amber tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-amber tbody tr:nth-child(odd) th {
+    background-color: #fff8e1;
+}
+
+.abc-table-hover.abc-table-mc-amber tbody tr:hover td, .abc-table-hover.abc-table-mc-amber tbody tr:hover th {
+    background-color: #ffecb3;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-amber tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-amber tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-amber tbody tr td:nth-child(odd) {
+        background-color: #fff8e1;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-amber tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-amber tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-amber tbody tr td:hover {
+        background-color: #ffecb3;
+    }
+}
+
+.abc-table-striped.abc-table-mc-orange tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-orange tbody tr:nth-child(odd) th {
+    background-color: #fff3e0;
+}
+
+.abc-table-hover.abc-table-mc-orange tbody tr:hover td, .abc-table-hover.abc-table-mc-orange tbody tr:hover th {
+    background-color: #ffe0b2;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-orange tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-orange tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-orange tbody tr td:nth-child(odd) {
+        background-color: #fff3e0;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-orange tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-orange tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-orange tbody tr td:hover {
+        background-color: #ffe0b2;
+    }
+}
+
+.abc-table-striped.abc-table-mc-deep-orange tbody tr:nth-child(odd) td, .abc-table-striped.abc-table-mc-deep-orange tbody tr:nth-child(odd) th {
+    background-color: #fbe9e7;
+}
+
+.abc-table-hover.abc-table-mc-deep-orange tbody tr:hover td, .abc-table-hover.abc-table-mc-deep-orange tbody tr:hover th {
+    background-color: #ffccbc;
+}
+
+@media screen and (max-width: 767px) {
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-orange tbody tr td, .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-orange tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-striped.abc-table-mc-deep-orange tbody tr td:nth-child(odd) {
+        background-color: #fbe9e7;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-orange tbody tr:hover td, .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-orange tbody tr:hover {
+        background-color: #fff;
+    }
+    .abc-table-responsive-vertical .abc-table-hover.abc-table-mc-deep-orange tbody tr td:hover {
+        background-color: #ffccbc;
+    }
+}
